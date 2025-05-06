@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Video</h1>
+    </header>
+    <!-- Link kembali ke halaman galeri -->
+    <a class="back-link" href="index.html">&larr; Kembali ke Galeri</a>
+
+    <!-- Pemutar video HTML5 -->
+    <video controls>
+        <!-- Tambahkan sumber video (file .mp4) di sini -->
+        <source src="video.mp4" type="video/mp4">
+        Browser Anda tidak mendukung tag video.
+    </video>
+
+    <script>
+        // Ambil parameter 'video' dari URL untuk menampilkan judul atau informasi lainnya
+        document.addEventListener("DOMContentLoaded", function() {
+            const params = new URLSearchParams(window.location.search);
+            const videoId = params.get('video');
+            const title = document.querySelector('header h1');
+            if (videoId) {
+                title.textContent = `Video ${videoId}`;
+            }
+        });
+    </script>
+</body>
+</html>
