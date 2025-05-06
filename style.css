@@ -1,0 +1,69 @@
+/* Reset box model */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+/* Header dengan latar belakang gelap */
+header {
+    background-color: #111;
+    padding: 10px;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Tata letak grid untuk galeri thumbnail */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Gaya untuk tautan thumbnail */
+.gallery a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Thumbnail gambar */
+.gallery img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s;
+    border-radius: 4px;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Pemutar video di halaman video.html */
+video {
+    display: block;
+    max-width: 90%;
+    margin: 20px auto;
+    border: 1px solid #333;
+    background-color: #000;
+}
+
+/* Gaya link kembali ke galeri */
+.back-link {
+    display: block;
+    margin: 10px;
+    color: #ccc;
+    text-decoration: none;
+}
+.back-link:hover {
+    color: #fff;
+}
